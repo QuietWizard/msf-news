@@ -1,0 +1,24 @@
+<section class="article_wrap">
+    <div ng-model="news">
+        <div class="article_content_wrap">
+            <div>
+                <h3 class="article_content_title" ng-bind-html="to_trusted(title)"></h3>
+            </div>
+            <div>
+                <div class="article_content_body" ng-bind-html="to_trusted(content)"></div>
+                <p class="text-center"># # #</p>
+            </div>
+        </div>
+    </div>
+    <div class="article_footer">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 btn-center">
+            <a href="#/details/{{prevItem}}" class="btn btn-default btn-article">&laquo; Previous Article</a>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 btn-center">
+            <a href="news.aspx" class="btn btn-default btn-article">Back to Articles</a>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 btn-center">
+            <a href="#/details/{{nextItem}}" class="btn btn-default btn-article">Next Article &raquo;</a>
+        </div>
+    </div>
+</section>

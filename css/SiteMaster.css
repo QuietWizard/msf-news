@@ -1,0 +1,299 @@
+﻿/*****************************************************/
+/*****************************************************/
+/***            Universal Attributes               ***/
+/***    MSF Red:            #cc2131                ***/
+/***    MSF Yellow:         #ffde6c                ***/
+/***    Header Bars:        #2c2c2c (dark grey)    ***/
+/***    General Error Red:  #990000                ***/
+/***    Flat Red Bar:       #a60000                ***/
+/*****************************************************/
+/*****************************************************/
+
+/**************************************************/
+/********** General Page Components ***************/
+/**************************************************/
+@font-face {
+    font-family:Ubuntu;
+    src: url("../fonts/Ubuntu-Regular.ttf");
+    font-weight:normal;
+}
+@font-face {
+    font-family:UbuntuMed;
+    src: url("../fonts/Ubuntu-Medium.ttf");
+    font-weight:bold;
+}
+@font-face {
+    font-family:UbuntuBold;
+    src: url("../fonts/Ubuntu-Bold.ttf");
+    font-weight:bolder;
+}
+@font-face {
+    font-family:UbuntuLight;
+    src: url("../fonts/Ubuntu-Light.ttf");
+    font-weight:lighter;
+}
+@-webkit-viewport { 
+    width: device-width;
+}
+@-moz-viewport {
+    width: device-width;
+}
+@-ms-viewport {
+    width: device-width;
+}
+@-o-viewport {
+    width: device-width;
+}
+@viewport {
+    width: device-width;
+}
+
+html, body {
+    font-family: UbuntuLight, Helvetica, Sans-Serif;
+    font-size:14px;
+    height: 100%;
+}
+body {
+    position:relative;
+    background-color:#060606;
+    font-family:Ubuntu;
+}
+#home-page-wrapper {
+    display:block;
+    padding-top:58px;
+    min-height:100%;
+    background: url('../images/master/background-body-radial.jpg') no-repeat fixed top center;
+}
+#heroContent {
+    max-width:1000px;
+    min-width:300px;
+    width:auto;
+    margin:0 auto;
+}
+.img-responsive {
+    padding-left:0;
+    padding-right:0;
+}
+.img-responsive img{
+    width:100%;
+}
+#pageContent {
+    max-width:1000px;
+    min-width:300px;
+    width:auto;
+    background:#ffffff;
+}
+.clear {
+    clear:both;
+}
+.row {
+    padding-left:0px;
+    margin-left:0px;
+    padding-right:0px;
+    margin-right:0px;
+}
+#panel .caret {
+    margin-top:2%;
+}
+
+/**************************************************/
+/********** ~/Site.Master *************************/
+/**************************************************/
+
+/********** Navbar Including Nav Logo and Images **********/
+.navbar {
+	border:none;
+	margin-bottom:0px;
+}
+.navbar-wrapper {
+    width:100%;
+}
+.navbar-inverse {
+    background:#060606;
+}
+.navbar-wrapper {
+    max-width:1000px;
+}
+.navbar-collapse {
+    overflow:visible;
+    max-height:500px;
+    background:#060606;
+}
+#logo {
+    margin-top: 5px;
+    margin-left:5px;
+    width:190px;
+    height: 67px;
+    background: url('../images/nav/msf_logo.png') no-repeat;
+}
+.navbar-form {
+    width:200px;
+    margin-top:4px;
+    margin-left:0px;
+    margin-right:-30px;
+}
+.navbar-form .form-control {
+    width:131px;
+    font-size:12px;
+    height: 25px;
+    line-height: 15px;
+    padding-left:4px;
+    background:#e6e6e6;
+    border-radius:0px;
+    border-right:0px;
+    box-shadow:none;
+}
+.navbar-form .btn {
+    height:25px;
+    background:#e6e6e6;
+    border-radius:0px;
+    border-left:0px;
+    padding-bottom:15px;
+}
+.input-group-btn .btn-default .glyphicon {
+    top:-3px;
+}
+#navbar-upper li {
+    font-family:UbuntuMed;
+    font-size:13px;
+    height:35px;
+}
+#navbar-upper li a {
+    line-height:5px;
+    color:#ffffff;
+}
+#navbar-lower li {
+    font-family:UbuntuMed;
+    font-size:16px;
+    height:43px;
+    padding-left:20px;
+    padding-right:20px;
+    background:url("../images/nav/nav-text-bg.png") repeat-x;
+}
+#navbar-lower li a {
+    line-height:10px;
+    color:#ffffff;
+}
+.navClickLink {
+    text-align:center;
+}
+#site-wrapper {
+    min-height:100%;
+    height:auto;
+    margin:0 auto -100px;
+    padding:0 0 100px;
+}
+@media (max-width:1000px) { /* If the width is less than 1000 pixels, shrink the size of the navbar padding for responsiveness. */
+    #navbar-lower li {
+       font-size:14px;
+       padding-left:15px;
+       padding-right:15px;
+    }
+    #navbar-upper li {
+        font-size:11px;
+        padding-left:10px;
+        padding-right:10px;
+    }
+    #navbar-upper .navbar-form {
+        width:200px;
+    }
+}
+@media (max-width:900px) { /* If the width is less than 900 pixels, shrink the size of the navbar padding for responsiveness. */
+    #navbar-lower li {
+       font-size:12px;
+       padding-left:2px;
+       padding-right:2px;
+    }
+    #navbar-upper li     {
+        font-size:10px;
+        padding-left:0px;
+        padding-right:0px;
+    }
+    #navbar-upper .navbar-form {
+        width:200px;
+    }
+}
+@media (max-width:767px) { /* When the Menu is set to collapse mode, padding on each side appears */
+    #logo {
+        margin-left:20px;
+    }
+    #nav-collapsable-box {
+        padding-left:40px;
+        padding-right:40px;
+    }
+    #navbar-upper {
+        margin-bottom:0px;
+    }
+    #navbar-upper li {
+        font-size:13px;
+        height:30px;
+
+    }
+    #navbar-lower {
+        margin-top:0px;
+    }
+    #navbar-lower li {
+        background:none;
+        font-size:13px;
+        height:30px;
+    }
+}
+
+/********** Footer Components **********/
+#footer-wrapper {
+    position:relative;
+    min-height:100px;
+    padding-top:25px;  
+	clear:both;
+}
+#footer-wrapper .container {
+    max-width:1000px;
+    
+}
+#motto-wrapper {
+    color:#ffde6c;
+    text-align:center;
+    padding-left:30px;
+}
+.footer-text {
+    padding-top:15px;
+    color:#c6c6c6;
+    text-align:center;
+}
+#footer-social-wrapper a {
+    padding-left:15px;
+}
+
+@media (max-width:1000px) { /* If the width is less than 1000 pixels, shrink the size of the navbar padding for responsiveness. */
+    #footer {
+        padding-bottom:25px;
+    }
+    .footer-text {
+        text-align:center;
+    }
+    #motto-wrapper {
+        padding-left:15px;
+    }
+    #footer-social-wrapper {
+        text-align:center;
+    }
+}
+@media (max-width:350px) {
+    #footer {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+/* Remove once this chrome font error is fixed */
+    body {
+        -webkit-animation-duration: 0.1s;
+        -webkit-animation-name: fontfix;
+        -webkit-animation-iteration-count: 1;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-delay: 0.1s;
+    }
+    @-webkit-keyframes fontfix {
+        from{ opacity: 1; }
+        to{ opacity: 1; }
+   }

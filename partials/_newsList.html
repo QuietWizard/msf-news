@@ -1,0 +1,75 @@
+<!-- Side Bar -->
+<div id="panel" class="panel-group col-lg-4 col-md-12 col-sm-12 col-xs-12 pull-left">
+    <!-- Menu Panel Wrapper: *Change Panel ID - Used to only open one menu at a time* -->
+    <div id="sidebar" data-spy="affix" data-offset-top="239" data-offset-bottom="120">
+        <!-- Sidebar Wrapper for Fixed Left Nav -->
+        <!-- News Links All -->
+        <div class="panel panel-default">
+            <div class="panel-heading sidebar-links">
+                <a onclick="ga('send','event','news.aspx','Click','2014 Articles Sidebar');" ng-click="articleFilter('All')">
+                    <h4 class="panel-title">
+                        All Articles
+                    </h4>
+                </a>
+            </div>
+        </div>
+        <!-- //END: News Links All -->
+        <!-- News Links 2015 -->
+        <div class="panel panel-default">
+            <div class="panel-heading sidebar-links">
+                <a onclick="ga('send','event','news.aspx','Click','2015 Articles Sidebar');" ng-click="articleFilter('2015')">
+                    <h4 class="panel-title">
+                        2015 Articles
+                    </h4>
+                </a>
+            </div>
+        </div>
+        <!-- News Links 2014 -->
+        <div class="panel panel-default">
+            <div class="panel-heading sidebar-links">
+                <a onclick="ga('send','event','news.aspx','Click','2014 Articles Sidebar');" ng-click="articleFilter('2014')">
+                    <h4 class="panel-title">
+                        2014 Articles
+                    </h4>
+                </a>
+            </div>
+        </div>
+        <!-- //END: News Links 2014 -->
+        <!-- News Links 2013 -->
+        <div class="panel panel-default">
+            <div class="panel-heading sidebar-links">
+                <a onclick="ga('send','event','news.aspx','Click','2013 Articles Sidebar');" ng-click="articleFilter('2013')">
+                    <h4 class="panel-title">
+                        2013 Articles
+                    </h4>
+                </a>
+            </div>
+        </div>
+        <!-- //END: News Links 2013 -->
+
+    </div><!-- //END: Sidebar Wrapper -->
+</div><!-- //END: Menu Panel Wrapper -->
+<!-- //END: Side Bar -->
+<!-- Main Content Panel -->
+<div id="linked-content-panel" class="col-lg-8 col-md-12 col-sm-12 col-xs-12 pull-right">
+
+    <!-- News Articles -->
+    <div id="news-link-anchor-2014" class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">{{yearTitle}} Articles</h3>
+        </div>
+        <div class="panel-body">
+            <div class="row col-lg-12 list_article_wrap" ng-repeat="item in news | filter: {Year: yearFilter} | orderBy:predicate">
+                <a href="#/details/{{news.indexOf(item)}}">
+                    <p class="list_date">{{item.Date}}</p>
+                    <h4 class="list_h4" ng-bind-html="to_trusted(item.Title)"></h4>
+                    <p class="list_p" ng-bind-html="to_trusted(item.Paragraph)"></p>
+                </a>
+                <hr />
+            </div>
+        </div>
+    </div>
+    <!-- //End: News Link 2014 -->
+
+</div>
+<!-- //END: Main Content Panel -->
